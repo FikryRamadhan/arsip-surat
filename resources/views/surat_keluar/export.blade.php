@@ -96,11 +96,11 @@
             </div>
             <div class="isi_2">
                 <p>
-                    Berikut Kami Sampaikan Surat Masuk Yang Kami Terima Pada Tanggal <span style="font-weight: bold">{{ $surat_keluar->tanggal_masuk->format('d F Y') }}</span>
-                    Mengenai Masalah <span style="font-weight: bold">{{ $surat_keluar->kategori->nama }}</span> Dan surat Ini Dikirim Oleh Instasi <span style="font-weight: bold">Dinas Pertanian Kab.Kuningan</span> .
+                    Berikut Kami Sampaikan Surat Keluar Yang Kami Kirim Pada Tanggal <span style="font-weight: bold">{{ $surat_keluar->tanggal_masuk->format('d F Y') }}</span>
+                    Mengenai Masalah <span style="font-weight: bold">{{ $surat_keluar->kategori->nama }}</span> Dan surat Ini Diterima Oleh Instasi <span style="font-weight: bold">{{ $surat_keluar->instasi->nama }}</span> .
                     <br>
                     <br>
-                    Berikut Kami Sampaikan Laporan Surat Masuk Pada Tanggal <span style="font-weight: bold">{{ $surat_keluar->tanggal_masuk->format('d F Y') }}</span>.
+                    Berikut Kami Sampaikan Laporan Surat Keluar Pada Tanggal <span style="font-weight: bold">{{ $surat_keluar->tanggal_masuk->format('d F Y') }}</span>.
                     <br>
                     Terimakasih Atas Perhatiannya. 
                 </p>

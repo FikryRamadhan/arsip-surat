@@ -120,4 +120,12 @@ class SuratMasukController extends Controller
         Alert::toast('Surat Masuk Berhasil Dihapus', 'success');
         return redirect()->route('surat-masuk');
     }
+
+    public function export(SuratMasuk $suratMasuk){
+        $pdf = \PDF::loadview('surat_masuk.export', [
+            'surat_masuk' => $suratMasuk
+        ])->setPaper('a4', 'Portrait');
+
+        return $pdf->stream('No.Surat_'.$suratMasuk->nomor_surat.'.pdf');
+    }
 }

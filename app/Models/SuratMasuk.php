@@ -11,6 +11,7 @@ class SuratMasuk extends Model
     use HasFactory;
 
     protected $guarded = [''];
+    protected $dates = ['tanggal_masuk'];
 
 
     public function kategori(){

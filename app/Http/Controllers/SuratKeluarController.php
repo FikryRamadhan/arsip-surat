@@ -119,4 +119,12 @@ class SuratKeluarController extends Controller
         return redirect()->route('surat-keluar');
         
     }
+
+    public function export(SuratKeluar $suratKeluar){
+        $pdf = \PDF::loadview('surat_keluar.export', [
+            'surat_keluar' => $suratKeluar
+        ])->setPaper('a4', 'Portrait');
+
+        return $pdf->stream('No.Surat_'.$suratKeluar->nomor_surat.'.pdf');
+    }
 }

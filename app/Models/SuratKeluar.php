@@ -11,6 +11,7 @@ class SuratKeluar extends Model
     use HasFactory;
 
     protected $guarded = [''];
+    protected $dates = ['tanggal_masuk'];
 
     public function kategori(){
         return $this->belongsTo(Kategori::class, 'id_kategori');

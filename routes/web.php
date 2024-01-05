@@ -44,6 +44,7 @@ Route::group(['middleware' => 'auth'], function() {
         Route::get('/{suratMasuk}/edit', [\App\Http\Controllers\SuratMasukController::class, 'edit'])->name('surat-masuk.edit');
         Route::put('/{suratMasuk}/update', [\App\Http\Controllers\SuratMasukController::class, 'update'])->name('surat-masuk.update');
         Route::get('/{suratMasuk}/destroy', [\App\Http\Controllers\SuratMasukController::class, 'destroy'])->name('surat-masuk.destroy');
+        Route::get('{suratMasuk}/export', [\App\Http\Controllers\SuratMasukController::class, 'export'])->name('surat-masuk.export');
     });
 
     // Surat Masuk
@@ -54,6 +55,7 @@ Route::group(['middleware' => 'auth'], function() {
         Route::get('/{suratKeluar}/edit', [\App\Http\Controllers\SuratKeluarController::class, 'edit'])->name('surat-keluar.edit');
         Route::put('/{suratKeluar}/update', [\App\Http\Controllers\SuratKeluarController::class, 'update'])->name('surat-keluar.update');
         Route::get('/{suratKeluar}/destroy', [\App\Http\Controllers\SuratKeluarController::class, 'destroy'])->name('surat-keluar.destroy');
+        Route::get('/{suratKeluar}/export', [\App\Http\Controllers\SuratKeluarController::class, 'export'])->name('surat-keluar.export');
     });
 
     // Kategori Surat

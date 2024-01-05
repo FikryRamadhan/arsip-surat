@@ -53,6 +53,10 @@
                                                 </button>
                                                 <div class="dropdown-menu">
                                                     <a class="dropdown-item edit"
+                                                        href="{{ route('surat-masuk.export', $item->id) }}">
+                                                        <i class="fas fa-file-alt mr-1" ></i> Install Laporan
+                                                    </a>
+                                                    <a class="dropdown-item edit"
                                                         href="{{ route('surat-masuk.edit', $item->id) }}">
                                                         <i class="fas fa-pencil-alt mr-1" ></i> Edit
                                                     </a>
